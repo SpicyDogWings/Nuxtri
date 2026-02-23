@@ -1,75 +1,121 @@
-# Nuxt Minimal Starter
+# Plantilla Nuxt + Tauri 🚀
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Una plantilla moderna para aplicaciones de escritorio que combina lo mejor de **Nuxt 4**, **Tauri** y **Nuxt UI**. Perfecta para crear aplicaciones rápidas, seguras y con interfaz profesional.
 
-## Setup
+## 🎯 Características
 
-Make sure to install dependencies:
+✅ **Nuxt 4** - Última versión con Vue 3, enrutamiento basado en archivos y potentes convenciones
+✅ **Tauri** - Aplicaciones de escritorio seguras con backend en Rust y tamaño mínimo
+✅ **Nuxt UI** - Componentes de interfaz profesionales y responsivos
+✅ **Tailwind CSS** - Estilos modernos y personalizables
+✅ **Vite** - Compilación rápida y desarrollo ágil
+✅ **TypeScript** - Soporte completo para tipado estático
+
+## 🛠 Requisitos Previos
+
+Asegúrate de tener instalado:
+
+- Node.js (v18+ recomendado)
+- pnpm (recomendado) o npm/yarn
+- Rust (para Tauri)
+- Tauri CLI
+
+## 🚀 Instalación
+
+1. Clona este repositorio:
 
 ```bash
-# npm
-npm install
+git clone https://github.com/SpicyDogWings/Nuxtri.git
+cd Nuxtri
+```
 
-# pnpm
+2. Instala las dependencias:
+
+```bash
+# Con pnpm (recomendado)
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+## 📱 Desarrollo
 
-Start the development server on `http://localhost:3000`:
+Inicia el servidor de desarrollo con Tauri:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+# Desarrollo web + escritorio
+pnpm tauri dev
 ```
 
-## Production
+El servidor se iniciará en:
+- **Web**: `http://localhost:3000`
+- **Desktop**: Ventana de Tauri
 
-Build the application for production:
+## 🔨 Compilación para Producción
+
+### Compilar aplicación de escritorio:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+# Compilar aplicación Tauri
+pnpm tauri build
 ```
 
-Locally preview production build:
+Los binarios se generarán en `src-tauri/target/release/`
 
-```bash
-# npm
-npm run preview
+## 📦 Estructura del Proyecto
 
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+```
+nuxt-tauri-template/
+├── app/                  # Código de Nuxt (frontend)
+│   ├── app.vue          # Landing page principal
+│   └── assets/          # Recursos estáticos
+├── src-tauri/            # Código de Tauri (backend Rust)
+│   ├── src/             # Código Rust
+│   └── tauri.conf.json  # Configuración de Tauri
+├── public/              # Archivos públicos
+├── package.json         # Dependencias de Node.js
+└── README.md             # Este archivo
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## 🎨 Personalización
+
+### Cambiar el nombre de la aplicación:
+
+1. Edita `package.json`:
+```json
+{
+  "name": "mi-nueva-app",
+  "version": "1.0.0"
+}
+```
+
+2. Edita `src-tauri/tauri.conf.json`:
+```json
+{
+  "package": {
+    "productName": "MiNuevaApp",
+    "version": "1.0.0"
+  }
+}
+```
+
+### Cambiar la landing page:
+
+Edita `app/app.vue` para modificar el contenido de la página principal.
+
+## 📚 Documentación
+
+- [Documentación de Nuxt](https://nuxt.com/docs)
+- [Guías de Tauri](https://tauri.app/v1/guides/)
+- [Componentes Nuxt UI](https://ui.nuxt.com/)
+- [Tailwind CSS](https://tailwindcss.com/docs)
+
+## 🤝 Contribución
+
+No soportadas por el momento
+
+## 📜 Licencia
+
+MIT License - Usa este template libremente para tus proyectos personales y comerciales.
+
+---
+
+**¡Gracias por usar esta plantilla!** 🚀
