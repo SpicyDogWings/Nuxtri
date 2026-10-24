@@ -13,8 +13,16 @@ node_modules
 logs
 *.log
 
+# Devbox / Nix
+.devbox
+.direnv
+
 # Misc
 .DS_Store
+.playwright-mcp
+
+# Zed (config local con tokens; la plantilla settings.example.json sí se versiona)
+.zed/settings.json
 .fleet
 .idea
 
