@@ -9,9 +9,18 @@
 //        Settings → Developer settings → Personal access tokens
 //        → Fine-grained tokens → Generate new token
 //          Repository access:  Only select repositories → <este repo>
-//          Permissions:        Contents: Read
-//                              Metadata: Read
-//                              (+ Issues / Pull requests si los quieres)
+//          Permissions:
+//            Metadata: Read                  (obligatorio siempre)
+//            Contents: Read                  → el agente solo LEE el repo
+//            Contents: Read and write        → el agente además puede
+//                                              crear commits y subir archivos
+//            Issues / Pull requests: Read    (opcional, para leerlos)
+//
+//    Con "Contents: Read" el agente puede consultar el repo pero NO podrá
+//    subir cambios (fallará al crear commits). Si quieres que trabaje por ti
+//    (crear el commit y hacer push), dale "Contents: Read and write".
+//    Para empujar desde la terminal no hace falta tocar este token:
+//        gh auth login
 //
 //    En .zed/settings.json sustituye el placeholder por el token real:
 //        ANTES:    "Authorization": "Bearer <TU_TOKEN_AQUI>"
